@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Control Panel</title>
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="script.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Control Panel</h1>
+        <div class="match-details">
+            <label>Match Title: <input type="text" id="match-title"></label>
+            <label>Venue: <input type="text" id="venue"></label>
+            <label>Match Type: 
+                <select id="match-type">
+                    <option>League</option>
+                    <option>Fun</option>
+                    <option>6 Side</option>
+                    <option>T20</option>
+                </select>
+            </label>
+            <label>Total Overs: <input type="number" id="total-overs"></label>
+            <button onclick="updateMatchDetails()">Update Match Details</button>
+        </div>
+        <div class="score-controls">
+            <h3>Score Bug</h3>
+            <label>Runs: <input type="number" id="runs" min="0"></label>
+            <label>Wickets: <input type="number" id="wickets" min="0"></label>
+            <label>Overs: <input type="text" id="overs"></label>
+            <button onclick="updateScore()">Update Score</button>
+        </div>
+        <div class="animations">
+            <h3>Animations</h3>
+            <button onclick="triggerAnimation('four')">4 Runs</button>
+            <button onclick="triggerAnimation('six')">6 Runs</button>
+            <button onclick="triggerAnimation('out')">Out</button>
+            <button onclick="triggerAnimation('not-out')">Not Out</button>
+        </div>
+        <p>Copy this link for output page: <input type="text" value="output.html" readonly></p>
+        <a href="output.html" target="_blank">Open Output Page</a>
+    </div>
+</body>
+</html>
